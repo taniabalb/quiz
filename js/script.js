@@ -12,3 +12,10 @@ $(document).ready(function() {
     });
 
 });
+function answ(){
+    if (answ === beer){
+        return 1;
+    } else {
+        
+    }
+}
