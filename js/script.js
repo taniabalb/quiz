@@ -8,10 +8,12 @@ $(document).ready(function() {
         var q1Result = $("#question1").val();
         var q2Result = $("#question2").val();
         var q3Result = $("#question3").val();
-        var totalScore;
         var score1 = question1(q1Result);
         var score2 = question2(q2Result);
         var score3 = question3(q3Result);
+        var totalScore= score1 + score2 + score3;
+        var character = genCharacter(totalScore);
+        $("#result").text(character);
     });
         
 });
@@ -47,4 +49,15 @@ function question3(x){
     } else {
         return 0;
     }
+}
+function genCharacter(totalScore){
+        if (totalScore > 10){
+            return "You are the beloved Cass";
+        }
+        if (totalScore < 5){
+            return "You are the baddie, Dean";
+        }
+        else{
+            return "You are the sweet, sweet Sammy";
+        }
 }
